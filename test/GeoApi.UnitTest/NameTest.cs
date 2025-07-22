@@ -24,12 +24,12 @@ public class NameTest
         new object[] { "M45_093", "Ошибка в имени"},
         new object[] { "f092!;", "Ошибка в имени"},
         new object[] { "рог;", "Ошибка в имени"},
-        new object[] { "()", "Длина имени от 3 до 30 сиволов"},
+        new object[] { "()", "Длина имени от 3 до 30 сиволов."},
         new object[] { "-+вввввв", "Ошибка в имени"},
         new object[] { "      ", "Имя не может быть пустым или отсутствовать"},
-        new object[] { "d", "Длина имени от 3 до 30 сиволов"},
+        new object[] { "d", "Длина имени от 3 до 30 сиволов."},
         new object[] { "-+lllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
-            "Длина имени от 3 до 30 сиволов" }
+            "Длина имени от 3 до 30 сиволов." }
     };
 
     [Theory]
