@@ -19,7 +19,7 @@ public record Name
 
         if (name.Length > 30 || name.Length < 3)
         {
-            throw new NameException("Длина имени от 3 до 30 сиволов");
+            throw new NameException("Длина имени от 3 до 30 сиволов.");
         }
 
         if (!Regex.IsMatch(name, @"^[a-zA-Z0-9]+$"))
