@@ -21,14 +21,14 @@ public class LocationData
     {
         //TODO валилдация обсудить с экспертом, аналитиком
         if (!coordinates.Any() || coordinates.Count < 3)
-            throw new LocationExceprions("At least 3 coordinates required");
+            throw new LocationExceprions("Требуется минимум три координаты");
 
         var ring = EnsureClosedRing(coordinates);
 
         var polygon = new Polygon(new LinearRing(ring.ToArray()));
 
         if (!polygon.IsValid)
-            throw new LocationExceprions("Polygon is invalid");
+            throw new LocationExceprions("Полигон не верен");
 
         var center = CalculateCenter(polygon);
 

@@ -18,18 +18,18 @@ public class NameTest
     public static IEnumerable<object[]> InvalidNames =>
     new List<object[]>
     {
-        new object[] { "Роб", "Name invalid" },
-        new object[] { "Anna Doe", "Name invalid" },
-        new object[] { "", "Name can't be null or empty" },
-        new object[] { "M45_093", "Name invalid"},
-        new object[] { "f092!;", "Name invalid"},
-        new object[] { "рог;", "Name invalid"},
-        new object[] { "()", "Name length must be between 3 and 30 characters"},
-        new object[] { "-+вввввв", "Name invalid"},
-        new object[] { "      ", "Name can't be null or empty"},
-        new object[] { "d", "Name length must be between 3 and 30 characters"},
+        new object[] { "Роб", "Ошибка в имени" },
+        new object[] { "Anna Doe", "Ошибка в имени" },
+        new object[] { "", "Имя не может быть пустым или отсутствовать" },
+        new object[] { "M45_093", "Ошибка в имени"},
+        new object[] { "f092!;", "Ошибка в имени"},
+        new object[] { "рог;", "Ошибка в имени"},
+        new object[] { "()", "Длина имени от 3 до 30 сиволов"},
+        new object[] { "-+вввввв", "Ошибка в имени"},
+        new object[] { "      ", "Имя не может быть пустым или отсутствовать"},
+        new object[] { "d", "Длина имени от 3 до 30 сиволов"},
         new object[] { "-+lllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
-            "Name length must be between 3 and 30 characters" }
+            "Длина имени от 3 до 30 сиволов" }
     };
 
     [Theory]

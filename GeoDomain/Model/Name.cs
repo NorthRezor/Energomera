@@ -15,16 +15,16 @@ public record Name
     public static Name CreateName(string name)
     {
         if (string.IsNullOrWhiteSpace(name))
-            throw new NameException("Name can't be null or empty");
+            throw new NameException("Имя не может быть пустым или отсутствовать");
 
         if (name.Length > 30 || name.Length < 3)
         {
-            throw new NameException("Name length must be between 3 and 30 characters");
+            throw new NameException("Длина имени от 3 до 30 сиволов");
         }
 
         if (!Regex.IsMatch(name, @"^[a-zA-Z0-9]+$"))
         {
-            throw new NameException("Name invalid");
+            throw new NameException("Ошибка в имени");
         }
 
         //TODO дополнительная валидация бизнес логики по запросу.
