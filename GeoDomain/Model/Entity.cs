@@ -1,4 +1,4 @@
-namespace GeoDomain.Model;
+﻿namespace GeoDomain.Model;
 
 public abstract class Entity
 {

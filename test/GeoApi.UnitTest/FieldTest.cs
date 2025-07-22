@@ -1,4 +1,4 @@
-using GeoApi.Model;
+﻿using GeoApi.Model;
 using NetTopologySuite.Geometries;
 
 namespace GeoApi.UnitTest;

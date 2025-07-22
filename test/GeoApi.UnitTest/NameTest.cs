@@ -1,4 +1,4 @@
-using GeoApi.Model;
+п»їusing GeoApi.Model;
 using GeoApi.Model.DomainExceprions;
 
 namespace GeoApi.UnitTest;
@@ -18,18 +18,18 @@ public class NameTest
     public static IEnumerable<object[]> InvalidNames =>
     new List<object[]>
     {
-        new object[] { "Роб", "Ошибка в имени" },
-        new object[] { "Anna Doe", "Ошибка в имени" },
-        new object[] { "", "Имя не может быть пустым или отсутствовать" },
-        new object[] { "M45_093", "Ошибка в имени"},
-        new object[] { "f092!;", "Ошибка в имени"},
-        new object[] { "рог;", "Ошибка в имени"},
-        new object[] { "()", "Длина имени от 3 до 30 сиволов"},
-        new object[] { "-+вввввв", "Ошибка в имени"},
-        new object[] { "      ", "Имя не может быть пустым или отсутствовать"},
-        new object[] { "d", "Длина имени от 3 до 30 сиволов"},
+        new object[] { "Р РѕР±", "РћС€РёР±РєР° РІ РёРјРµРЅРё" },
+        new object[] { "Anna Doe", "РћС€РёР±РєР° РІ РёРјРµРЅРё" },
+        new object[] { "", "РРјСЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј РёР»Рё РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ" },
+        new object[] { "M45_093", "РћС€РёР±РєР° РІ РёРјРµРЅРё"},
+        new object[] { "f092!;", "РћС€РёР±РєР° РІ РёРјРµРЅРё"},
+        new object[] { "СЂРѕРі;", "РћС€РёР±РєР° РІ РёРјРµРЅРё"},
+        new object[] { "()", "Р”Р»РёРЅР° РёРјРµРЅРё РѕС‚ 3 РґРѕ 30 СЃРёРІРѕР»РѕРІ"},
+        new object[] { "-+РІРІРІРІРІРІ", "РћС€РёР±РєР° РІ РёРјРµРЅРё"},
+        new object[] { "      ", "РРјСЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј РёР»Рё РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ"},
+        new object[] { "d", "Р”Р»РёРЅР° РёРјРµРЅРё РѕС‚ 3 РґРѕ 30 СЃРёРІРѕР»РѕРІ"},
         new object[] { "-+lllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
-            "Длина имени от 3 до 30 сиволов" }
+            "Р”Р»РёРЅР° РёРјРµРЅРё РѕС‚ 3 РґРѕ 30 СЃРёРІРѕР»РѕРІ" }
     };
 
     [Theory]
